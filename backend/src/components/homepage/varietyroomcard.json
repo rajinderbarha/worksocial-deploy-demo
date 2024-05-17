@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_homepage_varietyroomcards",
+  "info": {
+    "displayName": "Varietyroomcard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

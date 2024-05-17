@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "homepage.variet-rooms",
+        "homepage.slider",
+        "homepage.get-every-thing"
+      ]
+    },
+    "Companyfacilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.image-card"
+    }
+  }
+}

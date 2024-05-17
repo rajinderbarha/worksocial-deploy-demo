@@ -1,0 +1,53 @@
+.RequestATour{
+    background: url('../.../../../../assets/images/requestTour.png') no-repeat;     
+    background-position: center;
+    background-size: cover;
+    padding: 200px 16px 0 16px;
+    border-radius: 0 216px 216px 0;
+    margin-bottom: 187px;
+    margin-top: -175px;
+}
+.RequestATour_text{
+padding-left: 60px;
+}
+.RequestATour_text h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39.01px;
+    color: white;
+}
+
+
+.RequestATour_text p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    color: white;
+}
+.RequestATour_text h3, .RequestATour_text p {
+    box-shadow: 0px 0px 1px 0px #0000000A, 0px 2px 6px 0px #0000000A, 0px 16px 21px 0px #00000008;
+    width: fit-content;
+}
+
+.card_div{
+ margin-bottom: -100px;
+ position: relative;
+ z-index: 2;
+}
+
+
+@media only screen and (max-width:767px) {
+    .RequestATour{
+        padding: 80px 20px 80px 20px;
+        margin-top: 0;
+        border-radius: 0;
+  
+    }
+    .card_div{
+        margin-bottom: -200px;
+       }
+    .card_div {
+        margin-top: 60px;
+    }    
+
+}

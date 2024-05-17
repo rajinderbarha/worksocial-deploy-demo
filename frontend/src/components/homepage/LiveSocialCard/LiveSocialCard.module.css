@@ -1,0 +1,46 @@
+.LiveSocialCard{
+    max-width: 409px;
+    width: 100%;
+}
+.LiveSocialCard_image{
+    margin-bottom: 20px;
+}
+.LiveSocialCard_image img{
+    border-radius: 40px;
+}
+.LiveSocialCard_text_title {
+    gap: 8px;
+}
+
+.LiveSocialCard_text_title p {
+    margin-bottom: 0;
+}
+
+
+.LiveSocialCard_time {
+
+    margin-bottom: 0;
+}
+
+.LiveSocialCard_text_heading {
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.LiveSocialCard_text_description {
+    margin-bottom: 0;
+}
+.LiveSocialCard_text_duration p{
+margin-top: 28px;
+margin-bottom: 0;
+}
+
+@media only screen and (max-width:767px){
+.LiveSocialCard_text_duration p{
+    margin-top: 10px;
+}
+.LiveSocialCard {
+    max-width: 301px;
+    width: 100%;
+}
+}

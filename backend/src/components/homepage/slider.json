@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_sliders",
+  "info": {
+    "displayName": "slider",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Slidersec": {
+      "displayName": "slidersec",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.slidersec"
+    }
+  }
+}

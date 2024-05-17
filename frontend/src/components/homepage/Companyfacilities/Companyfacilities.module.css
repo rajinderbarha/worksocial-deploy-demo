@@ -1,0 +1,19 @@
+.Companyfacilities_container{
+    margin-top: 157px;
+}
+
+.Companyfacilities_card_container{
+    max-width: 238px;
+    width: 100%;
+    
+}
+
+.Companyfacilities_image_container{
+    width: 144px;
+    margin: 0 auto;
+}
+.facility_text{
+    text-align: center;
+    margin-top: 46px; 
+    text-transform: uppercase;
+}

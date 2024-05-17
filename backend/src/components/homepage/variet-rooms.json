@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_homepage_variet_rooms",
+  "info": {
+    "displayName": "VarietyRooms",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "global.button"
+    },
+    "varietyroomsheading": {
+      "type": "string"
+    },
+    "varietyroomstitle": {
+      "type": "string"
+    },
+    "Varietyroomcard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.varietyroomcard"
+    }
+  }
+}

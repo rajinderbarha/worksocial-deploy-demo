@@ -1,0 +1,146 @@
+.Variet_Rooms_container {
+    padding: 0 106px !important;
+}
+
+.connect_conatiner img {
+    max-width: fit-content;
+}
+
+.connect_conatiner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.varity_rooms {
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+
+
+.connect_conatiner button {
+    /* padding: 13px 47px; */
+    height: 50px;
+    padding-left: 47px;
+    padding-right: 47px;
+    background-color: #5E7481;
+    border-radius: 26px;
+    outline: none;
+    border: none;
+    color: white !important;
+
+}
+
+.Variet_Rooms_heading {
+    text-transform: uppercase;
+    margin-bottom: 11px;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* cards style */
+.cards_conatiner {
+    padding: 64px 22px 56px 22px;
+    row-gap: 23px;
+}
+
+.Variet_Rooms_cards {
+
+    width: 178px;
+    /* border: 1px solid black!important; */
+    border: none !important;
+    height: 361px !important;
+}
+
+.Variet_Rooms_card_image {
+    /* border: 1px solid black!important; */
+    width: 178px;
+}
+
+.Variet_Rooms_card_title {
+    line-height: 21.94px !important;
+}
+
+.Variet_Rooms_card_desc {
+    max-width: 130px;
+    line-height: 26px !important;
+}
+
+.card-body {
+    /* border: 1px solid black!important; */
+    max-width: 145px;
+    padding: 0 !important;
+    padding-top: 34px !important;
+
+}
+
+@media only screen and (max-width: 767px) {
+    .connect_conatiner p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .varity_rooms {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .connect_conatiner button {
+        width: 100%;
+        background-color: #E05E0F;
+    }
+
+    .cards_conatiner {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: scroll;
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cards_conatiner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cards_conatiner {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .Variet_Rooms_title {
+        padding-top: 86px;
+    }
+
+    .Variet_Rooms_card_image {
+        /* border: 1px solid black!important; */
+        width: 156px;
+        height: 136px;
+    }
+
+    .card-body {
+        padding-top: 10px !important;
+    }
+
+    .Variet_Rooms_cards {
+        height: max-content !important;
+    }
+
+    .see_solution {
+        width: 100%;
+        text-align: end;
+    }
+
+    .see_solution p {
+        font-size: 16px;
+        line-height: 19.5px;
+
+    }
+
+    .see_solution img {
+        margin-left: 8px;
+    }
+}
