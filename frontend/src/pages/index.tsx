@@ -59,7 +59,14 @@ export default  function Home({homapageData}:any) {
         console.log(CompanyfacilitiesData)
   return (
     <>
-      {blocks.map((block:any)=>   blockRenderer(block))}
+
+
+   
+
+      {blocks.map((block:any)=>   blockRenderer(block))};
+
+
+
      
        <Companyfacilities data={CompanyfacilitiesData}/>
         {/*<PopularLocations />
