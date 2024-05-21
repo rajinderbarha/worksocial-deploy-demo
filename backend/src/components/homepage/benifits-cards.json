@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_benifits_cards",
+  "info": {
+    "displayName": "BenifitsCards"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

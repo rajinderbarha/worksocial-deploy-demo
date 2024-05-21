@@ -1,7 +1,8 @@
 {
   "collectionName": "components_global_image_cards",
   "info": {
-    "displayName": "ImageCard"
+    "displayName": "ImageCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,14 +10,29 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
+      ]
+    },
+    "price": {
+      "type": "blocks"
+    },
+    "icons": {
       "type": "media",
-      "multiple": true
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

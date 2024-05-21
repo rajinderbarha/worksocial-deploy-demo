@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from './Slider.module.css';
 
-import { StrapiImage } from '@/components/custom/StrapiImage';
+// import { StrapiImage } from '@/components/custom/StrapiImage';
+import Image from 'next/image';
+import { getStrapiMedia } from '@/data/utils';
+
 
 function Slider({ data }: any) {
+    // console.log(data)
     const { Slidersec } = data;
 
     return (
@@ -23,12 +27,13 @@ function Slider({ data }: any) {
                 <div className="carousel-inner">
                     {Slidersec.map(({ sliderimg, title }: any, index: number) => (
                         <div key={`${index}_bgImage`} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                            <StrapiImage
+                            <Image
                                 alt="Background"
                                 className="absolute object-cover w-full h-full"
                                 height={1364}
-                                src={sliderimg.url}
+                                src={getStrapiMedia(sliderimg.url)}
                                 width={530}
+                                priority
                             />
                             <div className="carousel-caption ">
                                 <h1 className='heading_h1 font-semibold'>{title}</h1>

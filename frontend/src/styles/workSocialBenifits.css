@@ -1,0 +1,54 @@
+.padding_for_align{
+    padding-left:12px ;
+    }
+    .WorkSocialBenifits{
+    padding: 93px 0px 136px 0px;
+    border-radius: 0px 110px 110px 0px;
+    background: #F1F6EF;
+    }
+    
+    .WorkSocialBenifits_cards{
+        padding-top: 66px;
+     
+    }
+    
+    .WorkSocialBenifits_text p{
+        letter-spacing: 0.15em;
+        text-transform:uppercase ;
+        margin-bottom: 0;
+    }
+    .WorkSocialBenifits_text h3{
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    .WorkSocialBenifits_text h5{
+    margin-bottom: 0;
+    }
+    .WorkSocialBenifits_text h6 span{
+        font-weight: 700;
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .WorkSocialBenifits {
+            background-color: #f9f7f4;
+            padding-top: 62px;
+            border-radius: 0;
+        }
+        .WorkSocialBenifits_cards{
+            justify-content: center;
+            gap: 0px;
+        }
+        .schedule_tour_btn{
+            color:white!important;
+            border: 0;
+            height: 50px;
+            border-radius: 50px;
+            padding: 0 40px;
+        }
+        .reviews_div{
+                padding-top: 33px;
+                gap: 33px;
+            
+        }
+        
+    }

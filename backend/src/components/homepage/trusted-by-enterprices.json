@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_trusted_by_enterprices",
+  "info": {
+    "displayName": "TrustedByEnterprices",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "smallldesc": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.marquee"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_homepage_review_cards",
+  "info": {
+    "displayName": "Review_Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "profileImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "role": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

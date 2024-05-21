@@ -57,7 +57,7 @@ function TourRequestCard() {
               aria-expanded={isOpen ? 'true' : 'false'}
             >
               <div className="dropdown_textImg d-flex align-items-center">
-                <Image src={los_angeles} alt="Los Angeles" className="dropdown-img" />
+                <Image priority src={los_angeles} alt="Los Angeles" className="dropdown-img" />
                 <p>Los Angeles</p>
               </div>
             </button>

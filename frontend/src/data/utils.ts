@@ -47,13 +47,28 @@ export function flattenAttributes(data: any): any {     //this fn
   return flattened;
 }
 
-export function getStrapiURL() {
+// export function getStrapiURL() {
+//   return process.env.STRAPI_URL ?? "http://localhost:1337";
+// }
+
+// export function getStrapiMedia(url: string | null) {
+//   if (url == null) return null;
+//   if (url.startsWith("data:")) return url;
+//   if (url.startsWith("http") || url.startsWith("//")) return url;
+//   return `${getStrapiURL()}${url}`;
+// }
+
+export function getStrapiURL(): string {
   return process.env.STRAPI_URL ?? "http://localhost:1337";
 }
 
-export function getStrapiMedia(url: string | null) {
-  if (url == null) return null;
-  if (url.startsWith("data:")) return url;
-  if (url.startsWith("http") || url.startsWith("//")) return url;
+export function getStrapiMedia(url: string | null): string {
+  if (url == null) {
+    // Return a default placeholder image URL or an empty string if no URL provided
+    return "https://placehold.it/200x200";
+  }
+  if (url.startsWith("data:") || url.startsWith("http") || url.startsWith("//")) {
+    return url;
+  }
   return `${getStrapiURL()}${url}`;
 }

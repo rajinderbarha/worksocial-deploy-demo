@@ -20,13 +20,16 @@
       "components": [
         "homepage.variet-rooms",
         "homepage.slider",
-        "homepage.get-every-thing"
+        "homepage.get-every-thing",
+        "homepage.popular-locations",
+        "homepage.work-together",
+        "homepage.companyfacilities",
+        "homepage.trusted-by-enterprices",
+        "homepage.work-with-people",
+        "homepage.review-component",
+        "homepage.expand-your-bussiness",
+        "homepage.work-social-benifits"
       ]
-    },
-    "Companyfacilities": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.image-card"
     }
   }
 }

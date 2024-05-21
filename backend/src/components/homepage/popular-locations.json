@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_popular_locations",
+  "info": {
+    "displayName": "PopularLocations",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "mapviewbtn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.button"
+    },
+    "office": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.image-card"
+    },
+    "bookbtn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.button"
+    }
+  }
+}

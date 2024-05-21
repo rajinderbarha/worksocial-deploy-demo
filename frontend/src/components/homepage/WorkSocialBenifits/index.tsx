@@ -7,11 +7,13 @@ function WorkSocialBenifits() {
      <section className="WorkSocialBenifits">
         <div className='homemmain_padding'>
           <div className="homemain_conatiner padding_for_align">
+            
             <div className="WorkSocialBenifits_text ">
               <p className='grey_mid subtitle font-bold font-lato'>Benefits of</p>
               <h3 className='heading_h3 dark font-semibold'>WorkSocial</h3>
               <h5 className='heading_h5 grey_mid font-medium font-lato'>A <span className='font-bold'>Happiness</span> Company</h5>
             </div>
+
             <div className="WorkSocialBenifits_cards row ">
               <div className='col-md-3'>
               <BenifitsCards />

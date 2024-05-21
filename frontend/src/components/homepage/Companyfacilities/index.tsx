@@ -4,19 +4,21 @@ import work_from_office from '@/assets/images/work from office.svg'
 import collaborative_space from '@/assets/images/collaborative space.svg'
 import award from '@/assets/images/award.svg'
 import Image from 'next/image';
-import { StrapiImage } from '@/components/custom/StrapiImage';
+// import { StrapiImage } from '@/components/custom/StrapiImage';
+import { getStrapiMedia } from '@/data/utils';
 
 function Companyfacilities({data}:any) {
-  console.log(data)
+  // console.log(data)
+  const {CompanyFacilitiesCard} = data
   return (
     <section className="Companyfacilities homemain_conatiner Companyfacilities_container d-md-flex d-none">
       <div className="d-flex justify-content-md-around flex-wrap w-100">
-        {data.map(({title,image:{data}}:any,index:number)=>(
+        {CompanyFacilitiesCard?.map(({title,image}:any,index:number)=>(
 
           <div className="" key={index}>
           <div className="Companyfacilities_card_container work_from_office">
             <div className="Companyfacilities_image_container">
-              <StrapiImage src={data[0].url} width={144} height={144} alt="Work From An Office" />
+              <Image priority={true} src={getStrapiMedia(image.url)} width={144} height={144} alt="Work From An Office" />
             </div>
             <p className='facility_text text_body font-bold dark_gray'>{title}</p>
           </div>

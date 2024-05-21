@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_global_marquees",
+  "info": {
+    "displayName": "marquee",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

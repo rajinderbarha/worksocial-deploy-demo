@@ -1,0 +1,29 @@
+.WorkTogether{
+    margin-top: 214px;
+    padding-top: 47px;
+}
+.WorkTogether_text{
+    max-width:482px;
+}
+
+.description{
+margin-top: 63px;
+}
+.description span{
+    display: inline-block;
+    margin-top: 55px;
+}
+.WorkTogether_image > img{
+    
+    /* right: 0;
+    bottom: 0;
+    width: 50%; */
+    width: 100%;
+border-radius: 75px 0px 0px 75px;
+}
+.WorkTogether_image{
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}

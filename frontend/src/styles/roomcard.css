@@ -1,0 +1,60 @@
+.Roomcard{
+    max-width: 288px;
+    width:100%;
+    background-color: white;
+    border-radius: 24px;
+    padding: 12px 12px 34px 12px;
+    /* border   : 1px solid black; */
+    box-shadow: 0px 0px 1px 0px #0000000A, 0px 2px 6px 0px #0000000A,0px 16px 21px 0px #00000008;
+
+}
+.Roomcard_cover_image{
+    text-align: center;
+}
+.Roomcard_cover_image img{
+    margin: auto;
+    border-radius: 16px;
+    width: 100%;
+    /* border:1px solid black; */
+}
+.card_details{
+    /* border:1px solid black; */
+    margin-top: 17px;
+}
+.left_detail p{ 
+line-height: 20px;
+color: #333333;
+margin-bottom: 0;
+
+}
+.icons img:not(:last-child){
+    /* border: 1px solid black; */
+    margin-right: 8px;
+    margin-bottom: 0px;
+}
+.icons img:last-child{
+    position: relative;
+   bottom: 9px;
+}
+.pricetext{
+font-size: 12px;
+line-height: 16px;
+color: #828282;
+margin-bottom: 0;
+}
+.price{
+margin-bottom: 0;
+}
+
+.right_detail button{
+    margin-top: 17px;
+padding: 7px 19px;
+gap: 10px;
+border-radius: 26px ;
+color: white;
+border: none;
+
+}
+.Roomcard .icons img{
+    width: 24px;
+}
