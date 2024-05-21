@@ -6,6 +6,18 @@ import "@/styles/varietyRooms.css";
 import "@/styles/tourRequestCard.css";
 import "@/styles/getEveryThing.css";
 import "@/styles/companyfacilities.css";
+import "@/styles/popularLocations.css";
+import "@/styles/workTogether.css";
+import "@/styles/roomcard.css";
+import "@/styles/trustedByEnterprices.css";
+import "@/styles/marqueeComponent.css";
+import "@/styles/workWithPeople.css";
+import "@/styles/reviewComponent.css";
+import "@/styles/reviewCard.css";
+import "@/styles/expandYourBussiness.css";
+import "@/styles/workSocialBenifits.css";
+import "@/styles/benifitsCards.css";
+
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';

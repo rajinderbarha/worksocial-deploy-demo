@@ -27,7 +27,7 @@ import { HomepageGetEveryThing } from '../../../backend/types/generated/componen
 
 
 
-  function blockRenderer(block: any) {        // to define blocks according to  __component:   property
+  function blockRender(block: any) {        // to define blocks according to  __component:   property
     switch (block.__component) {
       case "homepage.slider":
         // console.log(block)
@@ -36,8 +36,20 @@ import { HomepageGetEveryThing } from '../../../backend/types/generated/componen
         return <VarietyRooms key={block.id} data={block} />;
       case "homepage.get-every-thing":
         return <GetEveryThing key={block.id} data={block} />;
-      // case "Companyfacilities":
-      //   return <Companyfacilities key={block.id} data={block} />;
+      case "homepage.companyfacilities":
+        return <Companyfacilities key={block.id} data={block} />;
+      case "homepage.popular-locations":
+        return <PopularLocations key={block.id} data={block} />;
+      case "homepage.work-together":
+        return <WorkTogether key={block.id} data={block} />;
+      case "homepage.trusted-by-enterprices":
+        return <TrustedByEnterprices key={block.id} data={block} />;
+      case "homepage.work-with-people":
+        return <WorkWithPeople key={block.id} data={block} />;
+      case "homepage.review-component":
+        return <ReviewComponent key={block.id} data={block} />;
+      case "homepage.expand-your-bussiness":
+        return <ExpandYourBussiness key={block.id} data={block} />;
       default:
         return null;
     }
@@ -47,36 +59,15 @@ import { HomepageGetEveryThing } from '../../../backend/types/generated/componen
 
 
 export default  function Home({homapageData}:any) {
-    console.log("home",homapageData)
-  // const homapageData  =  await getHomePageData()
-  // console.log("homapageData-----++++++++++---",homapageData.blocks);
+    // console.log("home",homapageData)
+
     const {blocks} = homapageData;
-  //   // console.log("---------------00000---------",blocks[1])
-  
   if(!blocks) return <div>No blocks found </div>
-  
-  const CompanyfacilitiesData  =  homapageData.Companyfacilities
-        console.log(CompanyfacilitiesData)
   return (
     <>
-
-
-   
-
-      {blocks.map((block:any)=>   blockRenderer(block))};
-
-
-
-     
-       <Companyfacilities data={CompanyfacilitiesData}/>
-        {/*<PopularLocations />
-      <WorkTogether />
-     <TrustedByEnterprices />
-       <WorkWithPeople />
-     <ReviewComponent />
-      <ExpandYourBussiness />
-        <WorkSocialBenifits />
-      <LiveSocial />
+      {blocks.map((block:any)=>   blockRender(block))};         
+     <WorkSocialBenifits />
+       {/*  <LiveSocial />
        <ScaleYourBusiness />
       <FAQComponent />
       <RequestATour /> */}

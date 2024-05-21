@@ -6,29 +6,29 @@ import Roomcard from '../Roomcard'
 import Image from 'next/image'
 import { FaRegMap } from "react-icons/fa";
 
-function PopularLocations() {
+function PopularLocations({data}:any) {
+  // console.log("--------",data)
+
+  const {heading,mapviewbtn:{title,url}} = data
   return (
     <>
       <section className="popular_locations position-relative">
         <div className="homemmain_padding">
         <div className="homemain_conatiner popular_locations_title d-flex justify-content-between">
-          <h3 className='heading_h3 dark font-bold'>Popular Locations Near You</h3>
-          <button className='d-none d-md-flex align-items-center font-bold text'> Map View <FaRegMap /> </button>
+          <h3 className='heading_h3 dark font-bold'>{heading}</h3>
+          <button className='d-none d-md-flex align-items-center font-bold text'>{title} <FaRegMap /> </button>
         </div>
         </div>
         <div className="map_image position-relative">
           <Image src={location_bg_image} alt=""  className='img-fluid'/>
           <div className="popular_locations_title position-absolute">
-          <button className=' d-md-none align-items-center font-bold text'> Map View <FaRegMap /> </button>
+          <button className=' d-md-none align-items-center font-bold text'>{title} <FaRegMap /> </button>
           </div>
         </div>
         {/* <div className="homemmain_padding"> */}
         <div className="homemain_conatiner  card_conatiner   ">
           <div className='row nowrap'>
-          <div className='col-md-3 max-content'>  <Roomcard /> </div>
-          <div className='col-md-3 max-content'>  <Roomcard /> </div>
-          <div className='col-md-3 max-content'>  <Roomcard /> </div>
-          <div className='col-md-3 max-content'>  <Roomcard /> </div>
+           <Roomcard carddata={data} />
           </div>
           </div>
         {/* </div> */}

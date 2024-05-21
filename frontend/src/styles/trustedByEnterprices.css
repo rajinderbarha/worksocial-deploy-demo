@@ -1,0 +1,24 @@
+.TrustedByEnterprices{
+    margin-top: 200px;
+}
+.TrustedByEnterprices_heading{
+/* font-size: 36px;
+font-weight: 600; */
+margin-bottom: 15px;
+}
+.TrustedByEnterprices_desc{
+    /* font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px; */
+    margin-bottom: 0;
+}
+.marquee_component_contain{
+    padding-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+.TrustedByEnterprices {
+    margin-top: 80px;
+}
+}
+

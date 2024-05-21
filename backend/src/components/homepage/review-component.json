@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_review_components",
+  "info": {
+    "displayName": "ReviewComponent",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "Review_Card": {
+      "displayName": "ReviewCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.review-card"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import qs from "qs";
 // import { getAuthToken } from "@/data/services/get-token";
-import { unstable_noStore as noStore } from 'next/cache';
+import { unstable_noStore as noStore } from "next/cache";
 import { flattenAttributes, getStrapiURL } from "@/data/utils";
 
 const baseUrl = getStrapiURL();
@@ -26,100 +26,129 @@ async function fetchData(url: string) {
   }
 }
 
-
 export async function getHomePageData() {
-  
-    const url =  new URL("/api/homepage",baseUrl)
+  const url = new URL("/api/homepage", baseUrl);
 
-    url.search =  qs.stringify({
-      populate: {
-       Companyfacilities:{
-         populate:{
-            image: {
-              fields: ["url"]
-            },
-            }
-            },
-        blocks: {
+  url.search = qs.stringify({
+    populate: {
+      blocks: {
         populate: {
-                Slidersec: {
-                  populate: {
-                    sliderimg: {
-                      fields: ["url"]
-                    }
-                  }
-                },
-                button:{
-                populate:{
-                icon:{
-                fields:["url"]
-                }
-                }
-                },
-                Varietyroomcard :{
-                  populate: {
-                  image: {
-                    fields:["url"]
-                  }
-                  }
-                },
-                image:{
-                 fields:["url"]
-                }
-              },
-        
-        
-            Links: {
-              populate: true
-            },
-    
-            logo: {
-              fields: ["url", "alternativeText"]
-            },
-            searchIcon: {
-              fields: ["url", "alternativeText"]
-            },
-      
-           
+        Review_Card :{
+        populate:{
+        profileImg:{
+        fields:["url","alternativeText"]
         }
-      }
-    })
+        
+        }
+        },
+        
+        
+        
+        logo:{
+        populate:{
+        logo:{
+        fields:["url","alternativeText"]
+        }
+        }
+        },
+          CompanyFacilitiesCard: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
 
-    return await fetchData(url.href)
+          mapviewbtn: {
+            populate: true,
+          },
+
+          office: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+              icons: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+
+          bookbtn: {
+            populate: {
+              icon: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+
+          Slidersec: {
+            populate: {
+              sliderimg: {
+                fields: ["url"],
+              },
+            },
+          },
+          button: {
+            populate: {
+              icon: {
+                fields: ["url"],
+              },
+            },
+          },
+          Varietyroomcard: {
+            populate: {
+              image: {
+                fields: ["url"],
+              },
+            },
+          },
+          image: {
+            fields: ["url"],
+          },
+        },
+
+        Links: {
+          populate: true,
+        },
+
+        logo: {
+          fields: ["url", "alternativeText"],
+        },
+        searchIcon: {
+          fields: ["url", "alternativeText"],
+        },
+      },
+    },
+  });
+
+  return await fetchData(url.href);
 }
 
 export async function getNavigationData() {
-  
-    const url =  new URL("/api/navigation",baseUrl)
+  const url = new URL("/api/navigation", baseUrl);
 
-    url.search =  qs.stringify({
-      populate:{
-      block:{
-      populate:{
-      Links:{
-      populate:true
-      },
-      
-      logo:{
-      fields:["url","alternativeText"]
-      },
-      searchIcon:{
-       fields:["url","alternativeText"]
-      }
-      }
-      }
-      }
-    })
+  url.search = qs.stringify({
+    populate: {
+      block: {
+        populate: {
+          Links: {
+            populate: true,
+          },
 
-    return await fetchData(url.href)
+          logo: {
+            fields: ["url", "alternativeText"],
+          },
+          searchIcon: {
+            fields: ["url", "alternativeText"],
+          },
+        },
+      },
+    },
+  });
+
+  return await fetchData(url.href);
 }
-
-
-
-
-
-
-
 
 // export async function getGlobalPageData(){      // header  and footer
 
@@ -137,8 +166,7 @@ export async function getNavigationData() {
 //       return await fetchData(url.href)
 // }
 
-
-// export async function getGlobalPageMetaData(){      // header  and footer    // setting metaData dynamically 
+// export async function getGlobalPageMetaData(){      // header  and footer    // setting metaData dynamically
 
 //     const url =  new URL(`/api/global`, baseUrl);
 
@@ -148,4 +176,3 @@ export async function getNavigationData() {
 //       // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",url.href)
 //       return await fetchData(url.href)
 // }
-

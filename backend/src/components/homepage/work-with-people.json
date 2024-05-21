@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_homepage_work_with_people",
+  "info": {
+    "displayName": "WorkWithPeople"
+  },
+  "options": {},
+  "attributes": {
+    "heading_left": {
+      "type": "string"
+    },
+    "heading_top": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

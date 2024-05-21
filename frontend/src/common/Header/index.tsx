@@ -7,6 +7,7 @@ import search_icon from "@/assets/images/search.svg";
 import menu_icon from '@/assets/images/menu_icon.svg'
 import Image from "next/image";
 import { StrapiImage } from "@/components/custom/StrapiImage";
+import { getStrapiMedia } from '../../data/utils';
 
 function Header({navbarData}:any) {
 
@@ -38,12 +39,12 @@ function Header({navbarData}:any) {
 
 
             <a className="navbar-brand" href="#">
-            <StrapiImage src={block[0].logo.url} height={52} width={213} alt="" className="logo_image"/>
+            <Image src={getStrapiMedia(block[0].logo.url)} height={52} width={213} alt="" className="logo_image"/>
           </a>
          
 
           <div className="menubtn_seachIcon_container d-flex align-items-center">
-          <StrapiImage src={block[0].searchIcon.url} height={24} width={24} alt="" className="search_icon_mobile "/>
+          <Image src={getStrapiMedia(block[0].searchIcon.url)} height={24} width={24} alt="" className="search_icon_mobile "/>
           <button
             className="navbar-toggler p-0 border-0"
             type="button"
@@ -95,7 +96,7 @@ function Header({navbarData}:any) {
                     contact
                   </a>
                 </li> */}
-                <StrapiImage src={block[0].searchIcon.url} height={24} width={24} alt="" className="search_icon_desktop"/>
+                <Image src={getStrapiMedia(block[0].searchIcon.url)} height={24} width={24} alt="" className="search_icon_desktop"/>
               </ul>
             </div>
           </div>

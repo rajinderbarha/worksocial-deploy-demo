@@ -8,7 +8,8 @@ import TourRequestCard from '../TourRequestCard';
 import arrow_right_icon from '@/assets/images/arrow_right_icon.svg'
 import Image from 'next/image';
 import { GoArrowRight } from "react-icons/go";
-import { StrapiImage } from '../../custom/StrapiImage';
+// import { StrapiImage } from '../../custom/StrapiImage';
+import { getStrapiMedia } from '@/data/utils';
 
 function VarietyRooms({data}:any) {
 
@@ -28,7 +29,7 @@ function VarietyRooms({data}:any) {
                 <p className='dark'>
                  {description}
                 </p>
-                <button className='text_body font-bold'> <StrapiImage src={icon.url} height={24} width={24} alt="" className=''/>{title}</button>
+                <button className='text_body font-bold'> <Image priority={true} src={getStrapiMedia(icon.url)} height={24} width={24} alt="" className=''/>{title}</button>
               </div>
             </div>
             <div className="row">
@@ -43,7 +44,7 @@ function VarietyRooms({data}:any) {
 
                   <div className="col" key={`${index}_Varietyroomcard`}>
                 <div className="card Variet_Rooms_cards">
-                  <StrapiImage src={image.url} width={178} height={176} className="card-img-top Variet_Rooms_card_image" alt="Conference Room" />
+                  <Image priority={true} src={getStrapiMedia(image.url)} width={178} height={176} className="card-img-top Variet_Rooms_card_image" alt="Conference Room" />
                   <div className="card-body">
                     <h5 className="heading_h5 card-title Variet_Rooms_card_title dark text_body font-bold">{title}</h5>
                     <p className="card-text Variet_Rooms_card_desc dark font-medium font-lato">{description}</p>

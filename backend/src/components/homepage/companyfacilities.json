@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_homepage_companyfacilities",
+  "info": {
+    "displayName": "Companyfacilities",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CompanyFacilitiesCard": {
+      "displayName": "CompanyfacilitiesCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.companyfacilities-card"
+    }
+  }
+}

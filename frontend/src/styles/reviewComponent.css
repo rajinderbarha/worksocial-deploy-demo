@@ -1,0 +1,43 @@
+
+.reviewcard_contain{
+    gap: 24px;
+}
+.ReviewComponent_heading{
+  margin-bottom: 38px;
+}
+  .rfm-marquee-container{
+    overflow: visible !important;
+  }
+  .ReviewComponent{
+    overflow: hidden;
+    position: relative;
+    padding: 146px 16px 200px 16px;
+  }
+.ReviewComponent_image{
+ position: absolute;
+ background-color: #FFF3EB;
+ border-radius: 216px 0 0 216px;
+ z-index: -1;
+  left: 65px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.review_container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 130px;
+}
+
+@media only screen and (max-width: 768px) {
+  .review_container {
+    padding-left: 16px;
+  }
+  .ReviewComponent_image{
+    display: none;
+  }
+  .ReviewComponent{
+    padding: 70px 20px;
+  }
+}

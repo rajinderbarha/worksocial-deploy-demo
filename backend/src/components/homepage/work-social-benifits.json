@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_work_social_benifits",
+  "info": {
+    "displayName": "WorkSocialBenifits",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "BenifitsCards": {
+      "displayName": "BenifitsCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.benifits-cards"
+    }
+  }
+}

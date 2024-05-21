@@ -1,0 +1,36 @@
+.ExpandYourBussiness{
+    padding-top: 164px;
+    padding-bottom: 70px;
+}
+.upper_heading h5{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+.upper_heading h4{
+/* font-size: 28px;
+font-weight: 700;
+line-height: 40px; */
+margin-bottom: 0;
+}
+.upper_heading h2{
+/* font-size: 45px;
+font-weight: 500;
+line-height: 52px; */
+margin-bottom: 0;
+}
+.ExpandYourBussiness_description{
+    padding-top: 31px;
+    max-width: 463px;
+    width:100%;
+}
+.ExpandYourBussiness_description p{
+/* font-size: 16px;
+font-weight: 500;
+line-height: 26px; */
+
+}
+.ExpandYourBussiness_image img{
+    border-radius:150px ;
+    width: 100%;
+}

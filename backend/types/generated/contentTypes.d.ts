@@ -376,9 +376,20 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   attributes: {
     title: Attribute.String;
     blocks: Attribute.DynamicZone<
-      ['homepage.variet-rooms', 'homepage.slider', 'homepage.get-every-thing']
+      [
+        'homepage.variet-rooms',
+        'homepage.slider',
+        'homepage.get-every-thing',
+        'homepage.popular-locations',
+        'homepage.work-together',
+        'homepage.companyfacilities',
+        'homepage.trusted-by-enterprices',
+        'homepage.work-with-people',
+        'homepage.review-component',
+        'homepage.expand-your-bussiness',
+        'homepage.work-social-benifits'
+      ]
     >;
-    Companyfacilities: Attribute.Component<'global.image-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
