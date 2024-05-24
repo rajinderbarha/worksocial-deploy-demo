@@ -1,0 +1,173 @@
+.Services_JerseyCity_container {
+    padding: 0 106px !important;
+}
+
+.connect_conatiner img {
+    max-width: fit-content;
+}
+
+.connect_conatin {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 631px;
+
+}
+.connect_conatiner p{
+    letter-spacing: normal;
+
+}
+.connect_conatiner p{
+    margin-bottom: 0;
+}
+.connect_conatiner h4{
+    margin-bottom: 30px;
+}
+
+.Services_container {
+    padding-top: 53px;
+    padding-bottom: 43px;
+}
+
+
+.connect_conatiner button {
+    /* / padding: 13px 47px; / */
+    height: 50px;
+    padding-left: 47px;
+    padding-right: 47px;
+    background-color: #5E7481;
+    border-radius: 26px;
+    outline: none;
+    border: none;
+    color: white !important;
+
+}
+
+.Services_JerseyCity_heading {
+    text-transform: uppercase;
+    margin-bottom: 11px;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* / cards style / */
+.cards_conatiner {
+    padding: 64px 22px 56px 0px;
+    row-gap: 23px;
+}
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    .cards_conatiner {
+       padding-bottom: 160px!important;
+    }
+}
+
+.Services_JerseyCity_cards {
+/* / width: 178px; / */
+    /* / border: 1px solid black!important; / */
+    border: none !important;
+    /* / height: 361px !important; / */
+    display: flex!important;
+    flex-direction: row!important;
+    width: 100%;
+    gap: 22px;
+    box-shadow: 0px 0px 1px 0px #0000000A, 0px 16px 21px 0px #00000008, 0px 2px 6px 0px #0000000A;
+    border-radius: 24px!important;
+    padding-left: 12px;
+}
+
+.Services_JerseyCity_card_image {
+    /* / border: 1px solid black!important; / */
+    width: 142px!important;
+}
+
+.Services_JerseyCity_card_title {
+    line-height: 21.94px !important;
+}
+
+.Services_JerseyCity_card_desc {
+    max-width: 130px;
+    line-height: 26px !important;
+}
+
+.card-body {
+    /* / border: 1px solid black!important; / */
+    max-width: 145px;
+    padding: 0 !important;
+    padding-top: 34px !important;
+
+}
+
+@media only screen and (max-width: 767px) {
+    .connect_conatiner p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .Services_container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .connect_conatiner button {
+        width: 100%;
+        background-color: #E05E0F;
+    }
+
+    .cards_conatiner {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: scroll;
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cards_conatiner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cards_conatiner {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .Services_JerseyCity_title {
+        padding-top: 86px;
+    }
+
+    .Services_JerseyCity_card_image {
+        /* / border: 1px solid black!important; / */
+        /* / width: 156px; / */
+        max-width: 100px!important;
+        /* / height: 136px; / */
+        height: auto;
+    }
+
+    .card-body {
+        padding-top: 10px !important;
+    }
+    .Services_JerseyCity_cards{
+        padding: 12px   ;
+    }
+
+    /* .Services_JerseyCity_cards {
+        height: max-content !important;
+    } */
+
+    .see_solution {
+        width: 100%;
+        text-align: end;
+    }
+
+    .see_solution p {
+        font-size: 16px;
+        line-height: 19.5px;
+
+    }
+
+    .see_solution img {
+        margin-left: 8px;
+    }
+}

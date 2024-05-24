@@ -22,7 +22,7 @@ function Roomcard({ carddata }: any) {
     // title      price
     return (
         <>
-            {office.map(({ image: { data }, icons, price }: any, index: number) => (
+            {office.map(({ image: { data }, icons, price,duration }: any, index: number) => (
                
         <div key={`${index}_office`} className='col-md-3 max-content'>
                 <div key={index} className="Roomcard">
@@ -44,9 +44,9 @@ function Roomcard({ carddata }: any) {
                         </div>
                         <div className="right_detail  d-flex flex-column align-items-end">
                             <div className="right_detail_text ">
-                                {/* <p className='pricetext '>Starting at</p>
-                                <h5 className='heading_h5 price dark_gray font-lato font-semibold'>$99<span className='subtitle font-semibold font-lato'></span></h5> */}
-                                <BlocksRenderer content={price} />
+                                <p className='pricetext '>Starting at</p>
+                                <h5 className='heading_h5 price dark_gray font-lato font-semibold'>${price}<span className='subtitle font-semibold font-lato'>{duration}</span></h5>
+                                {/* <BlocksRenderer content={price} /> */}
                             </div>
                             <button className='orange_dark_background d-flex font-bold text'>{title} <Image src={getStrapiMedia(icon.url)} height={25} width={24} alt="" /> </button>
                         </div>

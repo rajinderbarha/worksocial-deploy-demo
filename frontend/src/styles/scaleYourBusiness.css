@@ -1,0 +1,26 @@
+.ScaleYourBusiness{
+    padding-top: 172px;
+    padding-bottom: 153px;
+}
+
+.ScaleYourBusiness_image img{
+border-radius: 105px;
+}
+
+.ScaleYourBusiness_text{
+    max-width: max-content;
+    width: 100%;
+}
+
+.ScaleYourBusiness_text h2 {
+    max-width: 452px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.ScaleYourBusiness_text p {
+    max-width: 445px;
+    width: 100%;
+    margin-top: 43px;
+    margin-bottom: 0;
+}

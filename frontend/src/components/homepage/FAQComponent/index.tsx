@@ -5,8 +5,12 @@ import accordion_figma from '@/assets/images/accordion_figma.png'
 import requestATour from '@/assets/images/requestATour.png'
 import AccordionComponent from '../AccordionComponent'
 import Image from 'next/image'
+import { getStrapiMedia } from '@/data/utils'
 
-function FAQComponent() {
+function FAQComponent({data}:any) {
+    // console.log(data)
+const {title,heading,image:{url},FAQ} = data
+
     return (
         <>
            
@@ -16,11 +20,11 @@ function FAQComponent() {
                         <div className='row'>
                         <div className="col-md-7 p-0 FAQComponent_left">
                             <div className="FAQComponent_text">
-                                <p className='grey_mid text_body font-bold'>You’ve got questions?</p>
-                                <h3 className='heading_h3 font-semibold'>FAQs Have Answers</h3>
+                                <p className='grey_mid text_body font-bold'>{title}</p>
+                                <h3 className='heading_h3 font-semibold'>{heading}</h3>
                             </div>
                             {/* <img src={accordion_figma} alt="" className='accordion_figma_image' /> */}
-                            <AccordionComponent />
+                            <AccordionComponent data={FAQ} />
                         </div>
                         <div className="col-md-6 FAQComponent_right ">
 
@@ -32,8 +36,7 @@ function FAQComponent() {
                         </div>
                     </div>
                     <div className="FAQComponent_image position-absolute  d-none d-md-block ">
-                            <Image src={accordion_image} alt="" />
-                                
+                            <Image src={getStrapiMedia(url)} width={604} height={738} alt="" />
                             </div>
                 </div>
 

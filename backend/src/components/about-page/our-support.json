@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_page_our_supports",
+  "info": {
+    "displayName": "OurSupport"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "OurSupportBgImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SupportCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.support-card"
+    }
+  }
+}

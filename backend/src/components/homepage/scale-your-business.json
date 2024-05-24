@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_scale_your_businesses",
+  "info": {
+    "displayName": "ScaleYourBusiness"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

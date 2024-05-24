@@ -1,0 +1,31 @@
+
+.LiveSocial_imagetext_image img{
+    border-radius: 40px;
+}
+
+.LiveSocial_imagetext_text_title{
+gap: 8px;
+}
+.LiveSocial_imagetext_text_title p{
+    margin-bottom: 0;   
+}
+.LiveSocial_heading{
+letter-spacing: 0.15em;
+
+}
+.LiveSocial_time{
+font-size: 14px;
+font-weight: 500;
+/* line-height: 16.8px; */
+
+margin-bottom: 0;
+}
+.LiveSocial_imagetext_text h4{
+    max-width: 328px;
+margin-top: 7px;
+margin-bottom: 15px;
+}
+.LiveSocial_imagetext_text_description{
+    max-width: 536px;
+margin-bottom: 0;
+}

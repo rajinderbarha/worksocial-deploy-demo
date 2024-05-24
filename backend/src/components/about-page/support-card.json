@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_about_page_support_cards",
+  "info": {
+    "displayName": "SupportCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "JobTitle": {
+      "type": "string"
+    },
+    "SupportImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Description": {
+      "type": "text"
+    },
+    "AssistantImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "AssistantName": {
+      "type": "string"
+    }
+  }
+}

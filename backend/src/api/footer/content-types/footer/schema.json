@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "block": {
+      "type": "dynamiczone",
+      "components": [
+        "global.footer"
+      ]
+    },
+    "socialIcons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.footer-social"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.links"
+    },
+    "copyrightText": {
+      "type": "string"
+    },
+    "copyrightLink": {
+      "type": "string"
+    }
+  }
+}

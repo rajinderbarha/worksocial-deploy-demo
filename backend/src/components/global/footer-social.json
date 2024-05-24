@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_global_footer_socials",
+  "info": {
+    "displayName": "FooterSocial",
+    "icon": "crop"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "socialIconLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.links"
+    }
+  }
+}

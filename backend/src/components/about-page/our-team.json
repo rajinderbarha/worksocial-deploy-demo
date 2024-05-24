@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_about_page_our_teams",
+  "info": {
+    "displayName": "OurTeam",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "OurTeamBgInage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "TeamMemberCard": {
+      "displayName": "TeamMemberCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.team-member-card"
+    }
+  }
+}

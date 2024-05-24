@@ -28,7 +28,11 @@
         "homepage.work-with-people",
         "homepage.review-component",
         "homepage.expand-your-bussiness",
-        "homepage.work-social-benifits"
+        "homepage.work-social-benifits",
+        "homepage.live-social",
+        "homepage.scale-your-business",
+        "homepage.faq-component",
+        "global.request-a-tour"
       ]
     }
   }

@@ -33,24 +33,35 @@ export async function getHomePageData() {
     populate: {
       blocks: {
         populate: {
-        Review_Card :{
-        populate:{
-        profileImg:{
-        fields:["url","alternativeText"]
-        }
-        
-        }
-        },
-        
-        
-        
-        logo:{
-        populate:{
-        logo:{
-        fields:["url","alternativeText"]
-        }
-        }
-        },
+          FAQ: {
+            populate: true,
+          },
+          link: {
+            populate: true,
+          },
+          Benifit_Cards: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+
+          Review_Card: {
+            populate: {
+              profileImg: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+
+          logo: {
+            populate: {
+              logo: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
           CompanyFacilitiesCard: {
             populate: {
               image: {
@@ -104,7 +115,7 @@ export async function getHomePageData() {
             },
           },
           image: {
-            fields: ["url"],
+            fields: ["url","alternativeText"],
           },
         },
 
@@ -128,6 +139,24 @@ export async function getHomePageData() {
 export async function getNavigationData() {
   const url = new URL("/api/navigation", baseUrl);
 
+  // url.search = qs.stringify({
+  //   populate: {
+  //     block: {
+  //       populate: {
+  //         Links: {
+  //           populate: true,
+  //         },
+
+  //         logo: {
+  //           fields: ["url", "alternativeText"],
+  //         },
+  //         searchIcon: {
+  //           fields: ["url", "alternativeText"],
+  //         },
+  //       },
+  //     },
+  //   },
+  // });
   url.search = qs.stringify({
     populate: {
       block: {
@@ -142,13 +171,85 @@ export async function getNavigationData() {
           searchIcon: {
             fields: ["url", "alternativeText"],
           },
+          
+           Locations:{
+        populate:{
+        states:{
+        populate:true
+        }
+        }
+        }
         },
+        
+       
+        
       },
     },
   });
 
   return await fetchData(url.href);
 }
+
+export async function getFooterData() {
+  const url = new URL("/api/footer", baseUrl);
+
+  url.search = qs.stringify({
+    populate: {
+      block: {
+        populate: {
+          logo: {
+            fields: ["url", "alternativeText"],
+                },
+          FooterComponent :{
+            populate:{
+              links:{
+              populate:true
+                      }
+                    },
+                          },
+                  },
+             },
+       socialIcons:{
+         populate:{
+         socialIconLinks:{
+         populate:{
+           Image:{
+           fields:["url","alternativeText"]
+           }
+         }
+         }
+         }
+       },
+       
+       links :{
+       populate:true
+       }
+              },
+  });
+
+  return await fetchData(url.href);
+}
+
+
+export async function getLocationData() {
+  const url = new URL("/api/states", baseUrl);
+
+  url.search = qs.stringify({
+    populate:{
+    cities:{
+    populate:{
+    offices:{
+    populate:true
+             }
+    }
+    }
+    }
+    });
+
+  return await fetchData(url.href);
+}
+
+
 
 // export async function getGlobalPageData(){      // header  and footer
 

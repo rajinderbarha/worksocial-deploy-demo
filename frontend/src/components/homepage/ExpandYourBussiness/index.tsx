@@ -4,7 +4,7 @@ import imagetext_component_image from '@/assets/images/imagetext_component_image
 import Image from 'next/image'
 import { getStrapiMedia } from '../../../data/utils';
 function ExpandYourBussiness({data}:any) {
-  console.log(data)
+  // console.log(data)
   const{heading1,heading2,heading3,description,image:{url}} = data
   return (
     <>

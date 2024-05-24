@@ -1,0 +1,58 @@
+.LiveSocial {
+    padding-top: 117px;
+}
+
+.live_social_heading>p {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.live_social_heading_link {
+    margin-top: 4px;
+}
+
+.live_social_heading_link h3 {
+    margin-bottom: 0;
+}
+
+.live_social_heading_link p {
+    margin-bottom: 0;
+}
+
+.live_social_heading_link p a {
+    text-decoration: none;
+    text-align: right;
+}
+
+.LiveSocial_image {
+    padding: 55px 0 56px 0;
+}
+
+.LiveSocial_card_conatin {
+    gap: 25px;
+}
+
+
+@media only screen and (max-width:767px) {
+    .LiveSocial {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .LiveSocial_card_conatin {
+        overflow-x: scroll;
+    }
+
+    .LiveSocial_card_conatin::-webkit-scrollbar {
+        display: none;
+    }
+
+    .LiveSocial_card_conatin {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .live_social_heading_link {
+        margin-bottom: 44px;
+    }
+}

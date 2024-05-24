@@ -1,0 +1,12 @@
+.RoomSpaces_heading p{
+    margin-bottom: 0;
+    letter-spacing: normal;
+    padding-left: 20px;
+    padding-bottom: 18px;
+}
+.RoomSpaces_roomcard{
+    overflow-x: scroll;
+}
+.cards_padding{
+    padding-bottom: 25px;
+}

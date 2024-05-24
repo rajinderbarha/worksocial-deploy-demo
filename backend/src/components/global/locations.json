@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_global_locations",
+  "info": {
+    "displayName": "Locations"
+  },
+  "options": {},
+  "attributes": {
+    "states": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::state.state"
+    }
+  }
+}

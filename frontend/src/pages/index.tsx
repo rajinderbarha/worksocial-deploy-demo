@@ -17,71 +17,63 @@ import LiveSocial from "@/components/homepage/LiveSocial";
 import ScaleYourBusiness from "@/components/homepage/ScaleYourBusiness";
 import FAQComponent from "@/components/homepage/FAQComponent";
 import RequestATour from "@/components/homepage/RequestATour";
-import Header from "@/common/Header";
+// import Header from "@/common/Header";
 import { getHomePageData } from "../../lib/strapiQuery";
 import { HomepageGetEveryThing } from '../../../backend/types/generated/components';
 
 
-
-
-
-
-
-  function blockRender(block: any) {        // to define blocks according to  __component:   property
-    switch (block.__component) {
-      case "homepage.slider":
-        // console.log(block)
-        return <Slider key={block.id} data={block} />;
-      case "homepage.variet-rooms":
-        return <VarietyRooms key={block.id} data={block} />;
-      case "homepage.get-every-thing":
-        return <GetEveryThing key={block.id} data={block} />;
-      case "homepage.companyfacilities":
-        return <Companyfacilities key={block.id} data={block} />;
-      case "homepage.popular-locations":
-        return <PopularLocations key={block.id} data={block} />;
-      case "homepage.work-together":
-        return <WorkTogether key={block.id} data={block} />;
-      case "homepage.trusted-by-enterprices":
-        return <TrustedByEnterprices key={block.id} data={block} />;
-      case "homepage.work-with-people":
-        return <WorkWithPeople key={block.id} data={block} />;
-      case "homepage.review-component":
-        return <ReviewComponent key={block.id} data={block} />;
-      case "homepage.expand-your-bussiness":
-        return <ExpandYourBussiness key={block.id} data={block} />;
-      default:
-        return null;
-    }
+function blockRender(block: any) {        // to define blocks according to  __component:   property
+  switch (block.__component) {
+    case "homepage.slider":
+      // console.log(block)
+      return <Slider key={block.id} data={block} />;
+    case "homepage.variet-rooms":
+      return <VarietyRooms key={block.id} data={block} />;
+    case "homepage.get-every-thing":
+      return <GetEveryThing key={block.id} data={block} />;
+    case "homepage.companyfacilities":
+      return <Companyfacilities key={block.id} data={block} />;
+    case "homepage.popular-locations":
+      return <PopularLocations key={block.id} data={block} />;
+    case "homepage.work-together":
+      return <WorkTogether key={block.id} data={block} />;
+    case "homepage.trusted-by-enterprices":
+      return <TrustedByEnterprices key={block.id} data={block} />;
+    case "homepage.work-with-people":
+      return <WorkWithPeople key={block.id} data={block} />;
+    case "homepage.review-component":
+      return <ReviewComponent key={block.id} data={block} />;
+    case "homepage.expand-your-bussiness":
+      return <ExpandYourBussiness key={block.id} data={block} />;
+    case "homepage.work-social-benifits":
+      return <WorkSocialBenifits key={block.id} data={block} />;
+    case "homepage.live-social":
+      return <LiveSocial key={block.id} data={block} />;
+    case "homepage.scale-your-business":
+      return <ScaleYourBusiness key={block.id} Data={block} />;
+    case "homepage.faq-component":
+      return <FAQComponent key={block.id} data={block} />;
+    case "global.request-a-tour":
+      return <RequestATour key={block.id} data={block} />;
+    default:
+      return null;
   }
+}
 
 
 
 
-export default  function Home({homapageData}:any) {
-    // console.log("home",homapageData)
-
-    const {blocks} = homapageData;
-  if(!blocks) return <div>No blocks found </div>
-  return (
-    <>
-      {blocks.map((block:any)=>   blockRender(block))};         
-     <WorkSocialBenifits />
-       {/*  <LiveSocial />
-       <ScaleYourBusiness />
-      <FAQComponent />
-      <RequestATour /> */}
-    </>
-  );
+export default function Home({ homapageData }: any) {
+  // console.log("home",homapageData)
+  const { blocks } = homapageData;
+  if (!blocks) return <div>No blocks found </div>
+  return blocks.map((block: any) => blockRender(block));
 };
 
-
-
- export const getStaticProps = async () => {
-  const homapageData  =  await getHomePageData()
-
-  return{
-    props:{
+export const getStaticProps = async () => {
+  const homapageData = await getHomePageData()
+  return {
+    props: {
       homapageData
     }
   }

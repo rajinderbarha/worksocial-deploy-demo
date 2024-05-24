@@ -5,13 +5,13 @@ import React from 'react'
 import Header from '@/common/Header'
 import Footer from '@/common/Footer'
 
-const Layout = ({children, navbarData}:{children:React.ReactNode,navbarData:any} ) => {
+const Layout = ({children, headerData,footerData}:{children:React.ReactNode,headerData:any,footerData:any} ) => {
   
   return (
     <div>
-        <Header navbarData={navbarData}/>
+        <Header headerData={headerData}/>
         {children}
-        <Footer  />
+        <Footer footerData={footerData} />
     </div>
   )
 }
