@@ -15,7 +15,7 @@
     "heading": {
       "type": "blocks"
     },
-    "BenifitsCards": {
+    "Benifit_Cards": {
       "displayName": "BenifitsCards",
       "type": "component",
       "repeatable": true,

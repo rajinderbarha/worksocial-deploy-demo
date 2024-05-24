@@ -1,0 +1,68 @@
+.LocationImageBanner{
+    /* / border: 1px solid black; / */
+}
+.LocationImageBanner img{
+    border-radius: 72px;
+}
+.LocationImageBanner_caption{
+    bottom: 40px;
+    left: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .LocationImageBanner_caption{
+        /* / bottom: 30px; / */
+        left: 80px;
+    }
+    .LocationImageBanner_caption h1{
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+
+.LocationImageBanner img{ 
+    border-radius: 50px;
+}
+.LocationImageBanner_caption{
+    bottom: 30px;
+    left: 60px;
+}
+.LocationImageBanner_caption h1{
+    font-size: 28px;
+}
+}
+@media only screen and (max-width: 767px) {
+    .LocationImageBanner_caption{
+        left: 20px;
+        bottom: 20px;
+    }
+    .LocationImageBanner img{ 
+        border-radius: 30px;
+    }
+    .LocationImageBanner_caption h1{
+        font-size: 20px;
+    }
+    .LocationImageBanner{
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 639px) {
+    
+    .LocationImageBanner img{ 
+        /* / border-radius: 10px; / */
+    }
+    .LocationImageBanner_caption{
+        left: 20px;
+        bottom: 0px;    
+    }  
+   
+}
+@media only screen and (max-width: 400px) {
+    .LocationImageBanner_caption h1{
+        /* / font-size: 18px; / */
+        margin-bottom: 0;
+    } 
+    .LocationImageBanner img{ 
+        border-radius : 10px;
+    }
+}

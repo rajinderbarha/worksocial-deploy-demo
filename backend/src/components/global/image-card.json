@@ -20,9 +20,6 @@
         "audios"
       ]
     },
-    "price": {
-      "type": "blocks"
-    },
     "icons": {
       "type": "media",
       "multiple": true,
@@ -33,6 +30,19 @@
         "videos",
         "audios"
       ]
+    },
+    "duration": {
+      "type": "enumeration",
+      "enum": [
+        "/hr",
+        "/day",
+        "/week",
+        "/month"
+      ]
+    },
+    "price": {
+      "type": "string",
+      "required": true
     }
   }
 }

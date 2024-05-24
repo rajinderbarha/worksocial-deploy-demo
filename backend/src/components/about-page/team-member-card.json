@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_about_page_team_member_cards",
+  "info": {
+    "displayName": "TeamMemberCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "JobTitle": {
+      "type": "string"
+    },
+    "TeamMemberImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Moto": {
+      "type": "blocks"
+    }
+  }
+}

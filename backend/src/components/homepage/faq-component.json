@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_homepage_faq_components",
+  "info": {
+    "displayName": "FAQComponent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "FAQ": {
+      "displayName": "FAQ",
+      "type": "component",
+      "repeatable": true,
+      "component": "global.faq"
+    }
+  }
+}

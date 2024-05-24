@@ -17,22 +17,34 @@ import "@/styles/reviewCard.css";
 import "@/styles/expandYourBussiness.css";
 import "@/styles/workSocialBenifits.css";
 import "@/styles/benifitsCards.css";
+import "@/styles/liveSocial.css";
+import "@/styles/liveSocial_image_text.css";
+import "@/styles/liveSocialCard.css";
+import "@/styles/scaleYourBusiness.css";
+import "@/styles/faqComponent.css";
+import "@/styles/accordionComponent.css";
+import "@/styles/requestATour.css";
+import "@/styles/requestATourCard.css";
+import "@/styles/footer.css";
+import "@/styles/servicesJerseyCity.css";
 
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "@/layout";
-import { getNavigationData } from "../../lib/strapiQuery";
+import { getFooterData, getNavigationData } from "../../lib/strapiQuery";
 
-export default function App({ Component, pageProps, navbarData } : AppProps & {navbarData:any} ) {
+export default function App({ Component, pageProps, headerData, footerData } : AppProps & {headerData:any,footerData:any} ) {
   useEffect(() => {
     typeof document !== undefined ? require('bootstrap/dist/js/bootstrap.min.js') : null
 }, [])
 
 
+// console.log("++++++++++++++++++++++++++++++++++++++++++++",headerData)
+
 
   return<>
-  <Layout navbarData={navbarData}>
+ <Layout headerData={headerData}  footerData={footerData} >   
 
   <Component {...pageProps} />;
   </Layout>
@@ -40,9 +52,9 @@ export default function App({ Component, pageProps, navbarData } : AppProps & {n
 }
 
 App.getInitialProps = async () => {
-  const navbarData = await getNavigationData()
-  // const footerdata = await getFooter();
-  return { navbarData };
+  const headerData = await getNavigationData()
+  const footerData = await getFooterData()
+  return { headerData,footerData };
 };
 
 

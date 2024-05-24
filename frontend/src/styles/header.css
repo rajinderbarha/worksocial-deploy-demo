@@ -10,6 +10,11 @@
 .nav_conatiner{
     padding: 0;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
 @media only screen and (max-width:991px) {
     .nav_links{
         gap: 10px;

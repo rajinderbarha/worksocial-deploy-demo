@@ -1,19 +1,21 @@
 {
   "collectionName": "components_homepage_benifits_cards",
   "info": {
-    "displayName": "BenifitsCards"
+    "displayName": "Benifit_Cards",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"

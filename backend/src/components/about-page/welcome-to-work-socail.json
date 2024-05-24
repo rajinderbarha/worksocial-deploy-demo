@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_about_page_welcome_to_work_socails",
+  "info": {
+    "displayName": "WelcomeToWorkSocail",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "welcomeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
