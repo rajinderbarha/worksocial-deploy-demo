@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "StateName": {
+    "stateName": {
       "type": "string"
     },
     "cities": {
@@ -20,7 +20,7 @@
       "relation": "oneToMany",
       "target": "api::city.city"
     },
-    "slug": {
+    "stateSlug": {
       "type": "string"
     }
   }

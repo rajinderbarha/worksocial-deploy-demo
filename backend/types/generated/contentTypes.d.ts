@@ -827,6 +827,43 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiAmenetieAmenetie extends Schema.CollectionType {
+  collectionName: 'ameneties';
+  info: {
+    singularName: 'amenetie';
+    pluralName: 'ameneties';
+    displayName: 'Amenety';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    amenetyIcon: Attribute.Media;
+    offices: Attribute.Relation<
+      'api::amenetie.amenetie',
+      'manyToMany',
+      'api::office.office'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::amenetie.amenetie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::amenetie.amenetie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCityCity extends Schema.CollectionType {
   collectionName: 'cities';
   info: {
@@ -840,12 +877,21 @@ export interface ApiCityCity extends Schema.CollectionType {
   };
   attributes: {
     CityName: Attribute.String;
-    offices: Attribute.Relation<
+    space: Attribute.Relation<
       'api::city.city',
       'oneToMany',
       'api::office.office'
     >;
-    slug: Attribute.String;
+    citySlug: Attribute.String;
+    block: Attribute.DynamicZone<
+      [
+        'homepage.slider',
+        'homepage.variet-rooms',
+        'homepage.popular-locations',
+        'global.request-a-tour',
+        'homepage.companyfacilities'
+      ]
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1014,16 +1060,25 @@ export interface ApiOfficeOffice extends Schema.CollectionType {
   info: {
     singularName: 'office';
     pluralName: 'offices';
-    displayName: 'Office';
+    displayName: 'Space';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    OfficeName: Attribute.String;
     slug: Attribute.String;
     image: Attribute.Media;
+    address: Attribute.String;
+    description: Attribute.Text;
+    roomNo: Attribute.String;
+    ameneties: Attribute.Relation<
+      'api::office.office',
+      'manyToMany',
+      'api::amenetie.amenetie'
+    >;
+    bookitBtn: Attribute.Component<'global.button'>;
+    spaceName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1054,13 +1109,13 @@ export interface ApiStateState extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    StateName: Attribute.String;
+    stateName: Attribute.String;
     cities: Attribute.Relation<
       'api::state.state',
       'oneToMany',
       'api::city.city'
     >;
-    slug: Attribute.String;
+    stateSlug: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1098,6 +1153,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
+      'api::amenetie.amenetie': ApiAmenetieAmenetie;
       'api::city.city': ApiCityCity;
       'api::footer.footer': ApiFooterFooter;
       'api::homepage.homepage': ApiHomepageHomepage;
