@@ -15,13 +15,23 @@
     "CityName": {
       "type": "string"
     },
-    "offices": {
+    "space": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::office.office"
     },
-    "slug": {
+    "citySlug": {
       "type": "string"
+    },
+    "block": {
+      "type": "dynamiczone",
+      "components": [
+        "homepage.slider",
+        "homepage.variet-rooms",
+        "homepage.popular-locations",
+        "global.request-a-tour",
+        "homepage.companyfacilities"
+      ]
     }
   }
 }

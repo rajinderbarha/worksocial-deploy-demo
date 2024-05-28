@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ameneties",
+  "info": {
+    "singularName": "amenetie",
+    "pluralName": "ameneties",
+    "displayName": "Amenety",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "amenetyIcon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "offices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::office.office",
+      "mappedBy": "ameneties"
+    }
+  }
+}

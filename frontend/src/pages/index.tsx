@@ -70,6 +70,7 @@ export default function Home({ homapageData }: any) {
   return blocks.map((block: any) => blockRender(block));
 };
 
+
 export const getStaticProps = async () => {
   const homapageData = await getHomePageData()
   return {

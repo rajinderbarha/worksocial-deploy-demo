@@ -4,7 +4,7 @@
   "info": {
     "singularName": "office",
     "pluralName": "offices",
-    "displayName": "Office",
+    "displayName": "Space",
     "description": ""
   },
   "options": {
@@ -12,21 +12,42 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "OfficeName": {
-      "type": "string"
-    },
     "slug": {
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "roomNo": {
+      "type": "string"
+    },
+    "ameneties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::amenetie.amenetie",
+      "inversedBy": "offices"
+    },
+    "bookitBtn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.button"
+    },
+    "spaceName": {
+      "type": "string"
     }
   }
 }

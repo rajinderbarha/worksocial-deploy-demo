@@ -235,16 +235,56 @@ export async function getLocationData() {
   const url = new URL("/api/states", baseUrl);
 
   url.search = qs.stringify({
-    populate:{
-    cities:{
-    populate:{
-    offices:{
-    populate:true
-             }
+    populate: {
+    cities: {
+    populate: {
+    space: {
+    populate: true
+          },
+    block: {
+    populate: {
+    Slidersec : {
+    populate: {
+    sliderimg: {
+     fields: [
+                      "url",
+                      "alternativeText"
+                    ]
+                  }
+                }
+              },
+    Varietyroomcard : {
+    populate: {
+    image: {
+    fields: [
+                      "url",
+                      "alternativeText"
+                    ]
+                  }
+                }
+              },
+    image: {
+    fields: [
+                  "url",
+                  "alternativeText"
+                ]
+              },
+    CompanyFacilitiesCard : {
+    populate: {
+    image: {
+    fields: [
+                      "url",
+                      "alternativeText"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    }
-    }
-    });
+  });
 
   return await fetchData(url.href);
 }

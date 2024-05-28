@@ -61,8 +61,8 @@ function Header({ headerData }: any) {
                     <ul className="dropdown-menu">
                       {data?.map((state: any, index: number) => (
                         <li key={index}>
-                          <Link href={`/locations/${state.slug}`} className="dropdown-item">
-                            {state.StateName}
+                          <Link href={`/locations/${state.stateSlug}`} className="dropdown-item">
+                            {state.stateName}
                           </Link>
                         </li>
                       ))}
