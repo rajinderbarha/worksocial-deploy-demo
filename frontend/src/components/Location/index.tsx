@@ -3,17 +3,21 @@ import classes from './LocationPage.module.css';
 import Image from 'next/image';
 import search_icon from '../../assets/images/search_icon.svg';
 import full_screen_icon from '../../assets/images/full_screen_icon.svg';
-import FilterButtons from '@/location/FilterButtons';
+
+// import FilterButtons from '@/location/FilterButtons';
+import FilterButtons from './FilterButtons';
 import filter_icon from '../../assets/images/filter_icon.svg';
-import SortBy from '@/location/SortBy';
-import LocationCard from '@/location/LocationCard';
+// import SortBy from '@/location/SortBy';
+import SortBy from './SortBy';
+// import LocationCard from '@/location/LocationCard';
+import LocationCard from './LocationCard';
 import { RxCross2 } from "react-icons/rx";
 import Roomcard from '@/common/Roomcard';
 import { locationContext } from '../../store/locationContext';
 import GoogleMapComponent from './GoogleMapComponent';
 
-const ITEMS_PER_PAGE = 2;
 
+const ITEMS_PER_PAGE = 2;
 function LocationPage() {
   const { isLoading, filteredSpaces, onSearchInputChange, onSortChange, onSpaceCategoryChange, onPriceChange, sort, searchTerm, spaceCategory } = useContext(locationContext);
 

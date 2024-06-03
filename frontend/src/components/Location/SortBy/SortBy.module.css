@@ -2,7 +2,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('../../assets/images/drop_down.svg') no-repeat right center;
+    background: url('../../../assets/images/drop_down.svg') no-repeat right center;
     padding: 0px 20px;
     border: 0;
 }

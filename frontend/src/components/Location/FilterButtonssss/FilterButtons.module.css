@@ -21,7 +21,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('/assets/images/drop_down.svg') no-repeat right 20px center;
+    background: url('../../assets/images/drop_down.svg') no-repeat right 20px center;
     padding: 12px 46px 12px 20px;
     border-color: #B8B3B0;
 }
