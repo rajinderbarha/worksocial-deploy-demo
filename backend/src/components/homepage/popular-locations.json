@@ -14,15 +14,15 @@
       "repeatable": false,
       "component": "global.button"
     },
-    "office": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.image-card"
-    },
     "bookbtn": {
       "type": "component",
       "repeatable": false,
       "component": "global.button"
+    },
+    "spaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office.office"
     }
   }
 }

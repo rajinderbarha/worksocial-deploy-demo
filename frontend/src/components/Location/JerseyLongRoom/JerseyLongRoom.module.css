@@ -1,0 +1,108 @@
+.JerseyLongRoom{
+    padding-top:42px ;
+    padding-bottom: 200px;
+}
+.JerseyLongRoom p, .JerseyLongRoom h5{
+    margin-bottom: 0;
+}
+.JerseyLongRoom_title p{
+margin-top: 3px;
+margin-bottom: 22px;
+}
+.JerseyLongRoom_description p{
+line-height: 26px;
+}
+.JerseyLongRoom_amenities{
+    margin-top: 70px;
+}
+.JerseyLongRoom_amenities p{
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.JerseyLongRoom_amenities_buttons{
+    gap: 8px
+}
+.JerseyLongRoom_amenities_buttons button{
+    border: 0;
+    height: 40px;
+    padding: 0px 16px;
+    gap: 8px;
+}
+.JerseyLongRoom_amenities_buttons button img{
+    max-width: 24px;
+}
+.JerseyLongRoom_data{
+    margin-top:28px;
+}
+.JerseyLongRoom_left{
+    max-width: 590px;
+}
+.JerseyLongRoom_left_container{
+    /* max-width: 555px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; */
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.JerseyLongRoom_right{
+    margin-top: 45px;
+}
+.JerseyLongRoom_map_image{
+    width: 100%;
+    height: 141px;
+
+}
+.JerseyLongRoom_map_locaton{
+margin-top: 43px;
+margin-bottom: 72px;
+gap: 10px;
+}
+.JerseyLongRoom_map_locaton img{
+    max-width: 24px;
+    aspect-ratio: 1 / 1;
+}
+.JerseyLongRoom_map_locaton address{
+    margin-bottom: 0;
+    line-height: 24px;
+}
+.JerseyLongRoom_right button{
+    border: 0;
+    width: 100%;
+     padding: 13px ; 
+    height: 50px;
+
+}
+
+@media only screen and (max-width:767px){
+    .JerseyLongRoom{
+        padding-top:30px ;
+        padding-bottom: 100px;
+    }
+    .JerseyLongRoom_title p{
+        margin-bottom: 12px;
+        }
+        .JerseyLongRoom_amenities{
+            margin-top: 50px;
+        }
+        .JerseyLongRoom_right{
+            max-width: 330px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+}
+@media only screen and (max-width:500px){
+    .JerseyLongRoom_left_container{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .JerseyLongRoom_amenities{
+        margin-top: 40px;
+    }
+    .JerseyLongRoom_map_locaton{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        }
+}

@@ -157,7 +157,11 @@ export interface GlobalHeader extends Schema.Component {
     Links: Attribute.Component<'utils.links', true>;
     logo: Attribute.Media & Attribute.Required;
     searchIcon: Attribute.Media;
-    Locations: Attribute.Component<'global.locations'>;
+    states: Attribute.Relation<
+      'global.header',
+      'oneToMany',
+      'api::state.state'
+    >;
   };
 }
 
@@ -173,20 +177,6 @@ export interface GlobalImageCard extends Schema.Component {
     icons: Attribute.Media;
     duration: Attribute.Enumeration<['/hr', '/day', '/week', '/month']>;
     price: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface GlobalLocations extends Schema.Component {
-  collectionName: 'components_global_locations';
-  info: {
-    displayName: 'Locations';
-  };
-  attributes: {
-    states: Attribute.Relation<
-      'global.locations',
-      'oneToMany',
-      'api::state.state'
-    >;
   };
 }
 
@@ -210,6 +200,17 @@ export interface GlobalRequestATour extends Schema.Component {
     title: Attribute.String;
     description: Attribute.String;
     image: Attribute.Media;
+  };
+}
+
+export interface GlobalSpaceLocation extends Schema.Component {
+  collectionName: 'components_global_space_locations';
+  info: {
+    displayName: 'SpaceLocation';
+  };
+  attributes: {
+    longitude: Attribute.String;
+    latitude: Attribute.String;
   };
 }
 
@@ -314,8 +315,12 @@ export interface HomepagePopularLocations extends Schema.Component {
   attributes: {
     heading: Attribute.String;
     mapviewbtn: Attribute.Component<'global.button'>;
-    office: Attribute.Component<'global.image-card', true>;
     bookbtn: Attribute.Component<'global.button'>;
+    spaces: Attribute.Relation<
+      'homepage.popular-locations',
+      'oneToMany',
+      'api::office.office'
+    >;
   };
 }
 
@@ -463,6 +468,16 @@ export interface HomepageWorkWithPeople extends Schema.Component {
   };
 }
 
+export interface LocationLocation extends Schema.Component {
+  collectionName: 'components_location_locations';
+  info: {
+    displayName: 'Location';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
 export interface UtilsLinks extends Schema.Component {
   collectionName: 'components_utils_links';
   info: {
@@ -492,9 +507,9 @@ declare module '@strapi/types' {
       'global.footer': GlobalFooter;
       'global.header': GlobalHeader;
       'global.image-card': GlobalImageCard;
-      'global.locations': GlobalLocations;
       'global.marquee': GlobalMarquee;
       'global.request-a-tour': GlobalRequestATour;
+      'global.space-location': GlobalSpaceLocation;
       'homepage.benifits-cards': HomepageBenifitsCards;
       'homepage.companyfacilities-card': HomepageCompanyfacilitiesCard;
       'homepage.companyfacilities': HomepageCompanyfacilities;
@@ -514,6 +529,7 @@ declare module '@strapi/types' {
       'homepage.work-social-benifits': HomepageWorkSocialBenifits;
       'homepage.work-together': HomepageWorkTogether;
       'homepage.work-with-people': HomepageWorkWithPeople;
+      'location.location': LocationLocation;
       'utils.links': UtilsLinks;
     }
   }

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_space_locations",
+  "info": {
+    "displayName": "SpaceLocation"
+  },
+  "options": {},
+  "attributes": {
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    }
+  }
+}

@@ -31,11 +31,10 @@
         "images"
       ]
     },
-    "Locations": {
-      "displayName": "Locations",
-      "type": "component",
-      "repeatable": false,
-      "component": "global.locations"
+    "states": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::state.state"
     }
   }
 }

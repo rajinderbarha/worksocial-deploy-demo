@@ -26,9 +26,6 @@
         "audios"
       ]
     },
-    "address": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
     },
@@ -48,6 +45,44 @@
     },
     "spaceName": {
       "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "enumeration",
+      "enum": [
+        "/hr",
+        "/day",
+        "/week",
+        "/month"
+      ]
+    },
+    "address": {
+      "type": "blocks"
+    },
+    "SpaceLocation": {
+      "displayName": "SpaceLocation",
+      "type": "component",
+      "repeatable": false,
+      "component": "global.space-location"
+    },
+    "spaceCategory": {
+      "type": "enumeration",
+      "enum": [
+        "Conference",
+        "Day Offices",
+        "Enterprise Coworking",
+        "Private Offices",
+        "Rent Coworking",
+        "Virtual Office"
+      ]
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "spaces"
     }
   }
 }

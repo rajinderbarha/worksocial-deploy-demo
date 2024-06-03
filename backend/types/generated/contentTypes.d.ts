@@ -892,6 +892,11 @@ export interface ApiCityCity extends Schema.CollectionType {
         'homepage.companyfacilities'
       ]
     >;
+    spaces: Attribute.Relation<
+      'api::city.city',
+      'oneToMany',
+      'api::office.office'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1069,7 +1074,6 @@ export interface ApiOfficeOffice extends Schema.CollectionType {
   attributes: {
     slug: Attribute.String;
     image: Attribute.Media;
-    address: Attribute.String;
     description: Attribute.Text;
     roomNo: Attribute.String;
     ameneties: Attribute.Relation<
@@ -1079,6 +1083,25 @@ export interface ApiOfficeOffice extends Schema.CollectionType {
     >;
     bookitBtn: Attribute.Component<'global.button'>;
     spaceName: Attribute.String;
+    price: Attribute.String;
+    duration: Attribute.Enumeration<['/hr', '/day', '/week', '/month']>;
+    address: Attribute.Blocks;
+    SpaceLocation: Attribute.Component<'global.space-location'>;
+    spaceCategory: Attribute.Enumeration<
+      [
+        'Conference',
+        'Day Offices',
+        'Enterprise Coworking',
+        'Private Offices',
+        'Rent Coworking',
+        'Virtual Office'
+      ]
+    >;
+    city: Attribute.Relation<
+      'api::office.office',
+      'manyToOne',
+      'api::city.city'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
