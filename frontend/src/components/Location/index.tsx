@@ -76,7 +76,7 @@ function LocationPage() {
               </div>
             </div>
             <div className={`${classes.location_component_mainDiv} row gx-0`}>
-              <div className={`${classes.location_card_div} col-md-6 order-md-1 order-2`}>
+              <div className={`${classes.location_card_iv} col-md-6 order-md-1 order-2`}>
                 <div className={`${classes.LocationPage_leftdivider}`}>
                   <div className={`${classes.LocationPage_controls}`}>
                     <div className={`${classes.LocationPage_search} d-none d-md-flex align-items-center`}>

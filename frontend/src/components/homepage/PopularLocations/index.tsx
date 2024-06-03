@@ -35,7 +35,7 @@ const {spaces} = data
             {spaces.data.map((card:any,index:number)=>(
               <div className="col-md-3">
 
-                <Roomcard carddata={card} />
+                {/* <Roomcard carddata={card} /> */}
               </div>
             ))}
             </div>
