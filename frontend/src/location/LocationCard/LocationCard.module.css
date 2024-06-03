@@ -1,0 +1,70 @@
+.pricetext, .price_time{
+font-size: 12px;
+line-height: 16px;
+margin-bottom: 0;
+}
+.pricetext{
+    margin-bottom: 3px!important;
+}
+.LocationCard_image{
+    width: 100%;
+    height: auto;
+}
+.LocationCard_image img{
+    border-radius: 24px;
+}
+.LocationCard p, .LocationCard span , .LocationCard h6{
+    margin-bottom: 0;
+}
+.LocationCard_text, .LocationCard_bookmark_icon, .pricetext{
+    color: #7A7A7A;
+}
+.LocationCard_bookmark_icon{
+   font-size: 24px; 
+}
+.LocationCard_text_city{
+    margin-bottom: 3px!important;
+}
+.price_number{
+    font-size: 21px;
+}
+.pricetext_dollor{
+    font-size: 15px;
+}
+.LocationCard_content{
+    padding: 24px 16px 16px 24px;
+}
+.LocationCard{
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    /* background: #FFF3EB; */
+}
+
+/*------------onclick add the border------------*/
+.LocationCard{
+    padding: 8px;
+    border: 1px solid #E05E0F;
+    /* background: #FFF3EB; */
+}
+
+/*------------onhover add the border------------*/
+.LocationCard:hover{
+    background: #FFF3EB;
+}
+
+@media only screen and (max-width:1200px){
+    .LocationCard_content{
+        padding: 18px 12px 12px 18px;
+    }
+}
+@media only screen and (max-width:1100px){
+    .LocationCard_content{
+        padding: 15px 10px 10px 15px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .LocationCard_content{
+        padding: 10px 8px 8px 10px;
+    }
+}

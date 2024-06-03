@@ -9,11 +9,18 @@ import Image from "next/image";
 import { StrapiImage } from "@/components/custom/StrapiImage";
 import { getStrapiMedia } from '../../data/utils';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function Header({ headerData }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [collapseHeight, setCollapseHeight] = useState('0px');
   const collapseRef: any = useRef(null);
+  const router  = useRouter();
+
+
+  // console.log("0000000000000000000",headerData);
+  
+
 
   useEffect(() => {
     setCollapseHeight(isMenuOpen ? `${collapseRef.current.scrollHeight}px` : '0px');
@@ -25,9 +32,12 @@ function Header({ headerData }: any) {
 
   const { block } = headerData;
   const linksData = block[0].Links;
-  const Locations = block[0].Locations;
-  const { states: { data } } = Locations;
-  console.log(data);
+  const {states:{data}} = block[0];
+
+  // const { state: { data } } = Locations;
+  // console.log(data);
+
+  
 
   return (
     <>
@@ -55,18 +65,23 @@ function Header({ headerData }: any) {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav_links">
                 <li className="nav-item">
                   <div className="dropdown">
-                    <button className="  grey_mid  text_body font-semibold bg-transparent border-0" type="button" data-bs-toggle="dropdown" >
+                    <button onClick={()=>{router.push(`/locations`)}} className="  grey_mid  text_body font-semibold bg-transparent border-0" type="button" data-bs-toggle="dropdown" >
                       Location
                     </button>
+                    
                     <ul className="dropdown-menu">
                       {data?.map((state: any, index: number) => (
+                       
                         <li key={index}>
                           <Link href={`/locations/${state.stateSlug}`} className="dropdown-item">
                             {state.stateName}
                           </Link>
                         </li>
+                    
                       ))}
                     </ul>
+
+
                   </div>
                 </li>
                 {linksData.map(({ url, title }: any, index: number) => (

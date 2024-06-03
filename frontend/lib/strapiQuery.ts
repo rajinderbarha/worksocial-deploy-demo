@@ -74,16 +74,25 @@ export async function getHomePageData() {
             populate: true,
           },
 
-          office: {
+          spaces: {
             populate: {
-              image: {
-                fields: ["url", "alternativeText"],
+              image:{
+              fields:["url","alternativeText"]
               },
-              icons: {
-                fields: ["url", "alternativeText"],
+              ameneties:{
+              populate:{
+              amenetyIcon :{
+               fields:["url","alternativeText"]
               },
+              }
+              },
+              
+              bookitBtn:{
+              populate:true
+              },
+              
             },
-          },
+                  },
 
           bookbtn: {
             populate: {
@@ -168,6 +177,11 @@ export async function getNavigationData() {
           logo: {
             fields: ["url", "alternativeText"],
           },
+          
+          states:{
+          populate:true
+          },
+          
           searchIcon: {
             fields: ["url", "alternativeText"],
           },
@@ -239,7 +253,27 @@ export async function getLocationData() {
     cities: {
     populate: {
     space: {
-    populate: true
+    populate: {
+      image:{
+      fields:["url","alternativeText"]
+      },
+      ameneties:{
+      populate:{
+      amenetyIcon :{
+       fields:["url","alternativeText"]
+      },
+      }
+      },
+      
+      bookitBtn:{
+      populate:true
+      },
+
+      SpaceLocation:{
+        populate:true
+      }
+      
+    },
           },
     block: {
     populate: {
@@ -285,6 +319,43 @@ export async function getLocationData() {
       }
     }
   });
+
+  return await fetchData(url.href);
+}
+
+export async function getSpaceData() {
+  const url = new URL("/api/offices", baseUrl);
+
+  url.search = qs.stringify({
+  
+    populate: {
+      image:{
+      fields:["url","alternativeText"]
+      },
+      ameneties:{
+      populate:{
+      amenetyIcon :{
+       fields:["url","alternativeText"]
+      },
+      }
+      },
+      
+      bookitBtn:{
+      populate:true
+      },
+
+      SpaceLocation:{
+        populate:true
+      },
+      
+      city:{
+      populate:true
+      }
+      
+    },
+          }
+    
+       );
 
   return await fetchData(url.href);
 }

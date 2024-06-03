@@ -32,6 +32,12 @@
         "global.request-a-tour",
         "homepage.companyfacilities"
       ]
+    },
+    "spaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office.office",
+      "mappedBy": "city"
     }
   }
 }

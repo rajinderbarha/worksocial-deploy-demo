@@ -3,19 +3,18 @@ import CarouselImage from '@/assets/images/Carousels image.png';
 import classes from './LocationImageBanner.module.css'
 import Image from 'next/image';
 
-function LocationImageBanner({ stateName }:any) {
-    console.log(stateName);
+function LocationImageBanner({ location }:any) {
+    // console.log(location);
 
     return (
         <>
             <section className={`${classes.LocationImageBanner}`}>
                 <div className="homemmain_padding">
-
                     <div className="slider_conatiner">
                         <div className={`${classes.LocationImageBanner} position-relative`}>
                             <Image src={CarouselImage} className="d-block w-100 h-100" alt="..." />
                             <div className={`${classes.LocationImageBanner_caption}  position-absolute`}>
-                                <h1 className='heading_h1 text-white font-semibold'>WorkSocial {stateName.stateName} </h1>
+                                <h1 className='heading_h1 text-white font-semibold'>WorkSocial {location.CityName}  </h1>
                             </div>
                         </div>
                     </div>

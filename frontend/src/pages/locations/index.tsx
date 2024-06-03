@@ -1,11 +1,15 @@
+import LocationPage from '@/components/Location'
+import { LocationContextProvider } from '@/store/locationContext'
 import React from 'react'
 
 const Location = () => {
   return (
-    <div>
-        <h2>Location Page</h2>
-    </div>
+    <LocationContextProvider>
+        <LocationPage />
+    </LocationContextProvider>
   )
+
+
 }
 
 export default Location

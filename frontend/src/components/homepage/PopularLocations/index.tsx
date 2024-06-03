@@ -2,12 +2,15 @@ import React from 'react'
 import classes from  './PopularLocations.module.css'
 import map_view from '@/assets/images/map_view.svg'
 import location_bg_image from '@/assets/images/location_bg_image.png'
-import Roomcard from '../Roomcard'
+import Roomcard from '../../../common/Roomcard'
 import Image from 'next/image'
 import { FaRegMap } from "react-icons/fa";
 
 function PopularLocations({data}:any) {
-  // console.log("--------",data)
+  console.log("--------",data)
+
+const {spaces} = data 
+
 
   const {heading,mapviewbtn:{title,url}} = data
   return (
@@ -25,11 +28,17 @@ function PopularLocations({data}:any) {
           <button className=' d-md-none align-items-center font-bold text'>{title} <FaRegMap /> </button>
           </div>
         </div>
+        
         {/* <div className="homemmain_padding"> */}
         <div className="homemain_conatiner  card_conatiner   ">
-          <div className='row nowrap'>
-           <Roomcard carddata={data} />
-          </div>
+          <div className='row nowrap overflow-x-scroll'>
+            {spaces.data.map((card:any,index:number)=>(
+              <div className="col-md-3">
+
+                <Roomcard carddata={card} />
+              </div>
+            ))}
+            </div>
           </div>
         {/* </div> */}
       </section>

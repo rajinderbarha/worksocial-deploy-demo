@@ -1,0 +1,24 @@
+.GoBack{
+    gap: 10px;
+    }
+    .GoBack svg{
+    font-size: 24px;
+    }
+    .GoBack p{
+        margin-bottom: 0;
+    }
+    .GoBack:hover{
+        cursor: pointer;
+    }
+
+
+
+
+    .scrollable-place {
+        height: 1000px;
+    }
+
+    .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+    }
