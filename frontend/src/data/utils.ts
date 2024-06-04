@@ -59,7 +59,7 @@ export function flattenAttributes(data: any): any {     //this fn
 // }
 
 export function getStrapiURL(): string {
-  return process.env.STRAPI_URL ?? "http://localhost:1337";
+  return process.env.STRAPI_URL ?? "https://worksocial-deploy-demo.onrender.com";
 }
 
 export function getStrapiMedia(url: string | null): string {
