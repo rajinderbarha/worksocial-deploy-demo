@@ -64,7 +64,6 @@ function blockRender(block: any) {        // to define blocks according to  __co
 
 
 export default function Home({ homapageData }: any) {
-  // console.log("home",homapageData)
   const { blocks } = homapageData;
   if (!blocks) return <div>No blocks found </div>
   return blocks.map((block: any) => blockRender(block));
