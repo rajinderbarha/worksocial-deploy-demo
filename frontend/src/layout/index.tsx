@@ -11,7 +11,7 @@ const Layout = ({children, headerData,footerData}:{children:React.ReactNode,head
     <div>
         <Header headerData={headerData}/>
         {children}
-        <Footer footerData={footerData} />
+        {/* <Footer footerData={footerData} /> */}
     </div>
   )
 }
