@@ -71,12 +71,12 @@ export default function Home({ homapageData }: any) {
 };
 
 
-// export const getStaticProps = async () => {
-//   const homapageData = await getHomePageData()
-//   return {
-//     props: {
-//       homapageData
-//     }
-//   }
-// }
+export const getStaticProps = async () => {
+  const homapageData = await getHomePageData()
+  return {
+    props: {
+      homapageData
+    }
+  }
+}
 
