@@ -3,7 +3,7 @@
 import React from 'react'
 // import { FooterType, HeaderType } from '../../lib/interface'
 import Header from '@/common/Header'
-import Footer from '@/common/Footer'
+// import Footer from '@/common/Footer'
 
 const Layout = ({children, headerData,footerData}:{children:React.ReactNode,headerData:any,footerData:any} ) => {
   
@@ -11,7 +11,7 @@ const Layout = ({children, headerData,footerData}:{children:React.ReactNode,head
     <div>
         <Header headerData={headerData}/>
         {children}
-        <Footer footerData={footerData} />
+        {/* <Footer footerData={footerData} /> */}
     </div>
   )
 }

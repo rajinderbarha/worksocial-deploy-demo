@@ -66,16 +66,17 @@ function blockRender(block: any) {        // to define blocks according to  __co
 export default function Home({ homapageData }: any) {
   const { blocks } = homapageData;
   if (!blocks) return <div>No blocks found </div>
-  return blocks.map((block: any) => blockRender(block));
+  return<></>
+  //  blocks.map((block: any) => blockRender(block));
 };
 
 
-export const getStaticProps = async () => {
-  const homapageData = await getHomePageData()
-  return {
-    props: {
-      homapageData
-    }
-  }
-}
+// export const getStaticProps = async () => {
+//   const homapageData = await getHomePageData()
+//   return {
+//     props: {
+//       homapageData
+//     }
+//   }
+// }
 
